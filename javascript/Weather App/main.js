@@ -1,4 +1,8 @@
-const apiKey = "44958a4e3521b1a5e099d83326663291"
+//      To get the apiKey, login to Open Weather Map and paste your API key below
+//      https://openweathermap.org/
+
+
+const apiKey = ""  //Paste the API key here
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 const city = document.querySelector(".city");
