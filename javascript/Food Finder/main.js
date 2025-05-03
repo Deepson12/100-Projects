@@ -1,3 +1,6 @@
+
+
+
 const inputBlock = document.querySelector(".block");
 const searchInput = document.querySelector("#search");
 const resultList = document.querySelector("#results");
@@ -8,11 +11,8 @@ const nextBtn = document.querySelector("#next")
 const prevBtn = document.querySelector("#prev")
 
 
-// searchForm.addEventListener("submit", (e)=>{
-//     e.preventDefault();
-//     dataFetch();
-    
-// })
+//      To get the apiKey, login to spoonacular and paste your API key below
+const apiKey = ""
 
 let offset = 0;
 
@@ -32,7 +32,7 @@ prevBtn.addEventListener("click", ()=>{
 
 const dataFetch = async ()=>{
     let searchValue = searchInput.value.trim();
-    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${searchValue}&offset=${offset}&apiKey=835ef9ffbc054eabbb190fcd8f39b170`)
+    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${searchValue}&offset=${offset}&apiKey=${apiKey}`)
     const data = await response.json();
 
     showResult(data.results)
